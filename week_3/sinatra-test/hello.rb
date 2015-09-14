@@ -1,10 +1,6 @@
-# require 'sinatra'
-#
-# get '/' do
-#   @name = %w(Amigo Oscar Viking).sample
-#   erb :index
-# end
+require 'sinatra'
 
-array = %w(Amigo Oscar Viking)
-
-print array 
+get '/hello' do
+  @visitor = params[:name]
+  erb :index
+end
